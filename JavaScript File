@@ -1,0 +1,70 @@
+// Add event listeners for navigation links
+document.getElementById("homeLink").addEventListener("click", showHome);
+document.getElementById("internshipsLink").addEventListener("click", showInternships);
+document.getElementById("aboutLink").addEventListener("click", showAbout);
+document.getElementById("contactLink").addEventListener("click", showContact);
+
+// Functions to display different sections
+
+function showHome() {
+    const content = document.getElementById('content');
+    content.innerHTML = `
+        <section id="home" class="fade-in">
+            <div class="text-container">
+                <h2 class="slide-up">Home</h2>
+                <p class="fade-in-text">At SkillCraft Technology, we believe in the power of skills to shape futures. We are not just a company; we are craftsmen of talent, architects of opportunity, and builders of tomorrow.</p>
+            </div>
+        </section>
+    `;
+}
+
+function showInternships() {
+    const content = document.getElementById('content');
+    content.innerHTML = `
+        <section id="internships" class="fade-in">
+            <div class="text-container">
+                <h2 class="slide-up">Internships</h2>
+                <div class="internship-cards">
+                    <div class="card slide-up">
+                        <h3>Software Development Internship</h3>
+                    </div>
+                    <div class="card slide-up">
+                        <h3>Web Development Internship</h3>
+                    </div>
+                    <div class="card slide-up">
+                        <h3>App Development Internship</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function showAbout() {
+    const content = document.getElementById('content');
+    content.innerHTML = `
+        <section id="about" class="fade-in">
+            <div class="text-container">
+                <h2 class="slide-up">About</h2>
+                <p class="fade-in-text">We are focused on empowering students through skill development. Our aim is to equip students with practical knowledge and hands-on experience.</p>
+            </div>
+        </section>
+    `;
+}
+
+function showContact() {
+    const content = document.getElementById('content');
+    content.innerHTML = `
+        <section id="contact" class="fade-in">
+            <div class="text-container">
+                <h2 class="slide-up">Contact</h2>
+                <button id="showEmailBtn" class="slide-up">Show Email</button>
+                <p id="email" class="fade-in-text" style="display:none;">contact@skillcrafttech.com</p>
+            </div>
+        </section>
+    `;
+
+    document.getElementById('showEmailBtn').addEventListener('click', function () {
+        document.getElementById('email').style.display = 'block';
+    });
+}
